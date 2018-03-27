@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start index.js --watch",
+    "dev": "gulp",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "easymysql": "^0.2.7",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-ejs": "^4.1.1",
+    "koa-router": "^7.4.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "koa-static": "^4.0.2",
+    "koa-views": "^6.1.4",
+    "moment": "^2.21.0",
+    "nodemon": "^1.17.2"
+  }
+}

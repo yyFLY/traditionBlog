@@ -1,0 +1,42 @@
+<html>
+	
+    <% include header.ejs%> 
+	<body>
+    
+    <div class="g-blog-btn">
+        <a class="btn" href="/">回到主页</a>
+    </div>
+    <div id="page-wrapper">
+      <div id="wrapper"> 
+        <section class="panel color4-alt">
+            <div class="intro color4">
+              <h2 class="major">编辑</h2>
+              <p>修改这篇心情</p>
+            </div>
+            <div class="inner columns divided">
+              <div class="span-3-25">
+                <form method="post" action="/log/updateLog">
+                  <div class="field half">
+                    <label for="pageTitle">标题</label>
+                    <input type="text" name="pageTitle" id="pageTitle" value="<%= result.pageTitle %>">
+                  </div>
+                  <div class="field">
+                    <label for="pageContent">文章内容</label>
+                    <textarea name="pageContent" id="pageContent" rows="6"><%= result.pageContent %></textarea>
+                  </div>
+                  <ul class="actions">
+                      <input type="hidden" name="id" value="<%= result.id %>"/>
+                      <li><input type="submit" value="保存" class="special"></li>
+                      <li><input type="reset" value="还原心情"></li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+        </section>
+        <div class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+
+      </div>
+    </div>
+    <% include footer.ejs%> 
+  </body>
+</html>
